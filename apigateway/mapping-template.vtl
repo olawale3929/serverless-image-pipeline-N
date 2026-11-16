@@ -1,0 +1,5 @@
+#set($input = $input.json('$'))
+{
+  "input": "$util.escapeJavaScript($input).replaceAll("\\'","'")",
+  "stateMachineArn": "arn:aws:states:<REGION>:<ACCOUNT_ID>:stateMachine:image-resize-workflow"
+}
