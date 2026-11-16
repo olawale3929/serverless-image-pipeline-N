@@ -65,17 +65,10 @@ Step Functions → Create state machine → Blank → Code view, paste `statemac
 
 ## Usage
 
-### Option 1: upload to S3
+### upload to S3
 Upload a `.jpg`, `.jpeg` or `.png` to `<ORIGINALS_BUCKET>`. Within a few seconds a thumbnail (max 128x128, aspect ratio preserved) with the same file name appears in `<RESIZED_BUCKET>`.
 
-### Option 2: call the API
-The image must already be in the originals bucket. PowerShell:
-```powershell
-Invoke-RestMethod -Method Post `
-  -Uri "https://<API_ID>.execute-api.<REGION>.amazonaws.com/prod/resize" `
-  -ContentType "application/json" `
-  -Body '{"bucket":"<ORIGINALS_BUCKET>","key":"photo.jpg"}'
-```
+
 
 
 
